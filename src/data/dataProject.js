@@ -9,6 +9,7 @@ import DessertIcon from "../assets/icons/components/DessertIcon";
 import DrinksIcon from "../assets/icons/components/DrinksIcon";
 import SaleIcon from "../assets/icons/components/SaleIcon";
 import BurgerMenuIcon from "../assets/icons/components/BurgerMenuIcon";
+import SliderImage from "../assets/images/slider-img.png";
 
 export const headerTopLinks = [
   {
@@ -108,15 +109,18 @@ export const swiperSlides = [
     id: 1,
     title: "Калифорния в подарок при первом заказе",
     description: "от 1500 ₽ ",
+    imageURL: SliderImage,
   },
   {
-    id: 2,
+    id: 1,
     title: "Слайд №2",
-    description: "от 1500 ₽ ",
+    description: "от ---",
+    imageURL: SliderImage,
   },
   {
-    id: 3,
+    id: 1,
     title: "Слайд №3",
-    description: "от 1500 ₽ ",
+    description: "от ---",
+    imageURL: SliderImage,
   },
 ];

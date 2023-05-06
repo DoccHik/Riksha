@@ -4,9 +4,41 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background-color: #eee;
+  padding: 0px 20px;
+  background-color: #f5f9fa;
   min-height: 424px;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  img {
+    // max-width: 40%;
+  }
 }
+
+.slide {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// .swiper-button-next {
+//   &::after {
+//     content: "";
+//     background-color: #fff;
+//     width: 100px;
+//   }
+// }

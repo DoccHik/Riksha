@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import { Navigation } from "swiper";
+import { Autoplay, Keyboard, Navigation } from "swiper";
 import { swiperSlides } from "../../data/dataProject";
 
 const Slider = () => {
@@ -16,18 +16,33 @@ const Slider = () => {
     <>
       <Swiper
         className={styles["swiper"]}
-        modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={1}
-        navigation={true}
+        // navigation={true}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        cssMode={true}
+        // keyboard={true}
+        // mousewheel={true}
+        modules={[Navigation, Autoplay]}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}
       >
         {swiperSlides.map((slide) => (
           <SwiperSlide className={styles["swiper-slide"]}>
-            {slide.title}
+            <div className={styles["slide-wrapper"]}>
+              <div>
+                <h1>{slide.title}</h1>
+                <p>{slide.description}</p>
+              </div>
+              <div>
+                <img src={slide.imageURL} alt="" />
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
