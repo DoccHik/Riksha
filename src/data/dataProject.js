@@ -102,3 +102,21 @@ export const headerBottomLinks = [
 ];
 
 export const burgerMenuIcon = <BurgerMenuIcon />;
+
+export const swiperSlides = [
+  {
+    id: 1,
+    title: "Калифорния в подарок при первом заказе",
+    description: "от 1500 ₽ ",
+  },
+  {
+    id: 2,
+    title: "Слайд №2",
+    description: "от 1500 ₽ ",
+  },
+  {
+    id: 3,
+    title: "Слайд №3",
+    description: "от 1500 ₽ ",
+  },
+];
