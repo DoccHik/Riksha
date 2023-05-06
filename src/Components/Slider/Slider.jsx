@@ -19,8 +19,8 @@ const Slider = () => {
         spaceBetween={20}
         slidesPerView={1}
         // navigation={true}
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        // pagination={{ clickable: true }}
+        // scrollbar={{ draggable: true }}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -39,9 +39,11 @@ const Slider = () => {
                 <h1>{slide.title}</h1>
                 <p>{slide.description}</p>
               </div>
-              <div>
-                <img src={slide.imageURL} alt="" />
-              </div>
+              <img
+                className={styles["swiper-slide__img"]}
+                src={slide.imageURL}
+                alt=""
+              />
             </div>
           </SwiperSlide>
         ))}
