@@ -17,7 +17,10 @@ const Header = () => {
               <Link to="/" className={styles["header-top__logo"]}></Link>
               <ul className={styles["header-top__menu"]}>
                 {headerTopLinks.map((link) => (
-                  <li key={link.id} className={styles["header-top__menu-item"]}>
+                  <li
+                    key={link.linkName}
+                    className={styles["header-top__menu-item"]}
+                  >
                     {link.linkName}
                   </li>
                 ))}

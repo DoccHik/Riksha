@@ -33,7 +33,7 @@ const Slider = () => {
         // onSwiper={(swiper) => console.log(swiper)}
       >
         {swiperSlides.map((slide) => (
-          <SwiperSlide className={styles["swiper-slide"]}>
+          <SwiperSlide key={slide.id} className={styles["swiper-slide"]}>
             <div className={styles["slide-wrapper"]}>
               <div>
                 <h1>{slide.title}</h1>

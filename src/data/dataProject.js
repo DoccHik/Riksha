@@ -10,6 +10,10 @@ import DrinksIcon from "../assets/icons/components/DrinksIcon";
 import SaleIcon from "../assets/icons/components/SaleIcon";
 import BurgerMenuIcon from "../assets/icons/components/BurgerMenuIcon";
 import SliderImage from "../assets/images/slider-img.png";
+import FreeDeliveryIcon from "../assets/icons/components/FreeDeliveryIcon";
+import FastDevileryIcon from "../assets/icons/components/FastDevileryIcon";
+import BonusIcon from "../assets/icons/components/BonusIcon";
+import FreshProductsIcon from "../assets/icons/components/FreshProductsIcon";
 
 export const headerTopLinks = [
   {
@@ -122,5 +126,36 @@ export const swiperSlides = [
     title: "Слайд №3",
     description: "от ---",
     imageURL: SliderImage,
+  },
+];
+
+export const advantages = [
+  {
+    id: 1,
+    title: "Бесплатная",
+    image: <FreeDeliveryIcon />,
+    subTitle: "доставка",
+    text: "при заказе от 600 ₽",
+  },
+  {
+    id: 2,
+    title: "Доставим",
+    image: <FastDevileryIcon />,
+    subTitle: "за 60 мин",
+    text: "или проморол за опоздание",
+  },
+  {
+    id: 3,
+    title: "Подарим",
+    image: <BonusIcon />,
+    subTitle: "бонусы",
+    text: "бонусная система 1 ₽ = 1 бонус",
+  },
+  {
+    id: 4,
+    title: "Свежие",
+    image: <FreshProductsIcon />,
+    subTitle: "продукты",
+    text: "Никаких заготовок!",
   },
 ];
