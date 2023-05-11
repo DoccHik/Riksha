@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/modules/Header.module.scss";
 // import headerLogo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
@@ -7,7 +7,13 @@ import CartIcon from "../../assets/icons/components/CartIcon";
 import UserIcon from "../../assets/icons/components/UserIcon";
 import { headerBottomLinks, headerTopLinks } from "../../data/dataProject";
 import BurgerMenuIcon from "../../assets/icons/components/BurgerMenuIcon";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 const Header = () => {
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
+  const handleShowMenuBurger = () => {
+    setShowBurgerMenu(true);
+  };
   return (
     <>
       <header className={styles["header"]}>
@@ -41,7 +47,10 @@ const Header = () => {
               <Link to="/login" className={styles["header-top__user"]}>
                 <UserIcon />
               </Link>
-              <div className={styles["header-top__menu-burger"]}>
+              <div
+                className={styles["header-top__menu-burger"]}
+                onClick={handleShowMenuBurger}
+              >
                 <BurgerMenuIcon />
               </div>
             </div>
@@ -65,6 +74,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      {showBurgerMenu && <BurgerMenu setShowBurgerMenu={setShowBurgerMenu} />}
     </>
   );
 };
