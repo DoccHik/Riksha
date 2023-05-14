@@ -10,6 +10,7 @@ import BurgerMenuIcon from "../../assets/icons/components/BurgerMenuIcon";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 const Header = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  const ref = useRef(document.querySelector("body"));
 
   const handleShowMenuBurger = () => {
     setShowBurgerMenu(true);
@@ -17,9 +18,9 @@ const Header = () => {
 
   useEffect(() => {
     if (showBurgerMenu) {
-      document.querySelector("body").style.overflow = "hidden";
+      ref.current.style.overflow = "hidden";
     } else {
-      document.querySelector("body").style = null;
+      ref.current.style = "";
     }
   }, [showBurgerMenu]);
 
