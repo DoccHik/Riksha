@@ -4,10 +4,14 @@ import { headerTopLinks } from "../../data/dataProject";
 import CloseIcon from "../../assets/icons/components/CloseIcon";
 import { Link } from "react-router-dom";
 
-const BurgerMenu = ({ setShowBurgerMenu }) => {
+const BurgerMenu = ({ showBurgerMenu, setShowBurgerMenu }) => {
   return (
     <>
-      <div className={styles["burger-menu"]}>
+      <div
+        className={
+          showBurgerMenu ? styles["burger-menu-active"] : styles["burger-menu"]
+        }
+      >
         <div
           className={styles["burger-menu__close-btn"]}
           onClick={() => setShowBurgerMenu(false)}

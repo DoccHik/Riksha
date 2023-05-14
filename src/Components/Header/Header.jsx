@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/modules/Header.module.scss";
 // import headerLogo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
@@ -14,6 +14,15 @@ const Header = () => {
   const handleShowMenuBurger = () => {
     setShowBurgerMenu(true);
   };
+
+  useEffect(() => {
+    if (showBurgerMenu) {
+      document.querySelector("body").style.overflow = "hidden";
+    } else {
+      document.querySelector("body").style = null;
+    }
+  }, [showBurgerMenu]);
+
   return (
     <>
       <header className={styles["header"]}>
@@ -74,7 +83,10 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {showBurgerMenu && <BurgerMenu setShowBurgerMenu={setShowBurgerMenu} />}
+      <BurgerMenu
+        showBurgerMenu={showBurgerMenu}
+        setShowBurgerMenu={setShowBurgerMenu}
+      />
     </>
   );
 };
