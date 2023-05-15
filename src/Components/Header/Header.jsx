@@ -37,7 +37,7 @@ const Header = () => {
                     key={link.linkName}
                     className={styles["header-top__menu-item"]}
                   >
-                    {link.linkName}
+                    <Link to={link.path}>{link.linkName}</Link>
                   </li>
                 ))}
               </ul>
