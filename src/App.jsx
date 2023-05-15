@@ -16,19 +16,17 @@ const App = () => {
   return (
     <div className="wrapper">
       <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/pizza" element={<Pizza />} />
-          <Route path="/sushi" element={<Sushi />} />
-          <Route path="/rolls" element={<Rolls />} />
-          <Route path="/sets" element={<Sets />} />
-          <Route path="/wok" element={<Wok />} />
-          <Route path="/soups" element={<Soups />} />
-          <Route path="/salads" element={<Salads />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/pizza" element={<Pizza />} />
+        <Route path="/sushi" element={<Sushi />} />
+        <Route path="/rolls" element={<Rolls />} />
+        <Route path="/sets" element={<Sets />} />
+        <Route path="/wok" element={<Wok />} />
+        <Route path="/soups" element={<Soups />} />
+        <Route path="/salads" element={<Salads />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 export const Sushi = () => {
   return (
     <>
-      <div className="">
+      <div className="container">
         <h1>Суши</h1>
       </div>
     </>
