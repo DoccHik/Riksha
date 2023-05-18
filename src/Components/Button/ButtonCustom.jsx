@@ -1,9 +1,10 @@
 import React from "react";
+import styles from "../../styles/modules/ButtonCustom.module.scss";
 
 const ButtonCustom = ({ children }) => {
   return (
     <>
-      <button>{children}</button>
+      <button className={styles["button-custom"]}>{children}</button>
     </>
   );
 };

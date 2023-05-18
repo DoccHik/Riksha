@@ -58,17 +58,55 @@ export const Positions = () => {
                                 styles["positions-tabs-content__card-image"]
                               }
                             />
-                            <div>
-                              <small>{product.gram} грамм</small>
-                              <small>{product.calories} Ккал</small>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-info"]
+                              }
+                            >
+                              <small
+                                className={
+                                  styles["positions-tabs-content__card-gram"]
+                                }
+                              >
+                                {product.gram} грамм
+                              </small>
+                              <small
+                                className={
+                                  styles[
+                                    "positions-tabs-content__card-calories"
+                                  ]
+                                }
+                              >
+                                {product.calories} Ккал
+                              </small>
                             </div>
-                            <h3>{product.productName}</h3>
-                            <p>{product.structure}</p>
-                            <div>
-                              <h2>
-                                <small>{product.oldPrice}</small>
-                                {product.price}
-                              </h2>
+                            <h3
+                              className={
+                                styles["positions-tabs-content__card-title"]
+                              }
+                            >
+                              {product.productName}
+                            </h3>
+                            <p
+                              className={
+                                styles["positions-tabs-content__card-structure"]
+                              }
+                            >
+                              {product.structure}
+                            </p>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-bottom"]
+                              }
+                            >
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-price"]
+                                }
+                              >
+                                <small>{product.oldPrice}₽</small>
+                                <h3>{product.price}₽</h3>
+                              </div>
                               <ButtonCustom>Заказать</ButtonCustom>
                             </div>
                           </div>
@@ -85,7 +123,6 @@ export const Positions = () => {
                           <div
                             className={styles["positions-tabs-content__card"]}
                           >
-                            {/* TODO: прописать логику отображения иконок  */}
                             <span>icon</span>
                             <span>icon</span>
                             <img
@@ -95,17 +132,55 @@ export const Positions = () => {
                                 styles["positions-tabs-content__card-image"]
                               }
                             />
-                            <div>
-                              <small>{product.gram} грамм</small>
-                              <small>{product.calories} Ккал</small>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-info"]
+                              }
+                            >
+                              <small
+                                className={
+                                  styles["positions-tabs-content__card-gram"]
+                                }
+                              >
+                                {product.gram} грамм
+                              </small>
+                              <small
+                                className={
+                                  styles[
+                                    "positions-tabs-content__card-calories"
+                                  ]
+                                }
+                              >
+                                {product.calories} Ккал
+                              </small>
                             </div>
-                            <h3>{product.productName}</h3>
-                            <p>{product.structure}</p>
-                            <div>
-                              <h2>
-                                <small>{product.oldPrice}</small>
-                                {product.price}
-                              </h2>
+                            <h3
+                              className={
+                                styles["positions-tabs-content__card-title"]
+                              }
+                            >
+                              {product.productName}
+                            </h3>
+                            <p
+                              className={
+                                styles["positions-tabs-content__card-structure"]
+                              }
+                            >
+                              {product.structure}
+                            </p>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-bottom"]
+                              }
+                            >
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-price"]
+                                }
+                              >
+                                <small>{product.oldPrice}₽</small>
+                                <h3>{product.price}₽</h3>
+                              </div>
                               <ButtonCustom>Заказать</ButtonCustom>
                             </div>
                           </div>
