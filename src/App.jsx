@@ -11,6 +11,7 @@ import { Sets } from "./pages/Sets/Sets";
 import { Wok } from "./pages/Wok/Wok";
 import { Soups } from "./pages/Soups/Soups";
 import { Salads } from "./pages/Salads/Salads";
+import { Cart } from "./pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/wok" element={<Wok />} />
         <Route path="/soups" element={<Soups />} />
         <Route path="/salads" element={<Salads />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -1,0 +1,121 @@
+import React, { useEffect, useState } from "react";
+import styles from "../../styles/modules/MainPage.module.scss";
+import { tabsPositions } from "../../data/dataProject";
+import Card from "../Card/Card";
+import ButtonCustom from "../Button/ButtonCustom";
+
+export const Positions = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  // console.log(activeTab);
+
+  // TODO: Сделать табы заново!
+
+  const handleTabContent = (id) => {
+    setActiveTab(id);
+  };
+
+  useEffect(() => {
+    tabsPositions.map((tab) =>
+      tab.id === activeTab ? setActiveTab(tab.id) : setActiveTab(1)
+    );
+  }, []);
+  return (
+    <>
+      <div className={styles["positions"]}>
+        <ul className={styles["positions-tabs"]}>
+          {tabsPositions.map((tab, i) => {
+            return (
+              <li
+                key={tab.id}
+                className={
+                  activeTab === tab.id
+                    ? styles["positions-tabs__item-active"]
+                    : styles["positions-tabs__item"]
+                }
+                onClick={() => handleTabContent(tab.id)}
+              >
+                {tab.tabName}
+              </li>
+            );
+          })}
+        </ul>
+        <div className={styles["positions-tabs-content"]}>
+          {activeTab === 1
+            ? tabsPositions.map((tab) =>
+                tab.id === activeTab
+                  ? tab.tabContent.map((product) => {
+                      return (
+                        <Card key={product.id}>
+                          <div
+                            className={styles["positions-tabs-content__card"]}
+                          >
+                            <span>icon</span>
+                            <span>icon</span>
+                            <img
+                              src={product.image}
+                              alt="Product"
+                              className={
+                                styles["positions-tabs-content__card-image"]
+                              }
+                            />
+                            <div>
+                              <small>{product.gram} грамм</small>
+                              <small>{product.calories} Ккал</small>
+                            </div>
+                            <h3>{product.productName}</h3>
+                            <p>{product.structure}</p>
+                            <div>
+                              <h2>
+                                <small>{product.oldPrice}</small>
+                                {product.price}
+                              </h2>
+                              <ButtonCustom>Заказать</ButtonCustom>
+                            </div>
+                          </div>
+                        </Card>
+                      );
+                    })
+                  : null
+              )
+            : tabsPositions.map((tab) =>
+                tab.id === activeTab
+                  ? tab.tabContent.map((product) => {
+                      return (
+                        <Card key={product.id}>
+                          <div
+                            className={styles["positions-tabs-content__card"]}
+                          >
+                            {/* TODO: прописать логику отображения иконок  */}
+                            <span>icon</span>
+                            <span>icon</span>
+                            <img
+                              src={product.image}
+                              alt="Product"
+                              className={
+                                styles["positions-tabs-content__card-image"]
+                              }
+                            />
+                            <div>
+                              <small>{product.gram} грамм</small>
+                              <small>{product.calories} Ккал</small>
+                            </div>
+                            <h3>{product.productName}</h3>
+                            <p>{product.structure}</p>
+                            <div>
+                              <h2>
+                                <small>{product.oldPrice}</small>
+                                {product.price}
+                              </h2>
+                              <ButtonCustom>Заказать</ButtonCustom>
+                            </div>
+                          </div>
+                        </Card>
+                      );
+                    })
+                  : null
+              )}
+        </div>
+      </div>
+    </>
+  );
+};

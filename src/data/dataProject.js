@@ -14,6 +14,8 @@ import FreeDeliveryIcon from "../assets/icons/components/FreeDeliveryIcon";
 import FastDevileryIcon from "../assets/icons/components/FastDevileryIcon";
 import BonusIcon from "../assets/icons/components/BonusIcon";
 import FreshProductsIcon from "../assets/icons/components/FreshProductsIcon";
+import Roll1 from "../assets/images/roll-1.png";
+import Roll2 from "../assets/images/roll-2.png";
 
 export const headerTopLinks = [
   {
@@ -157,5 +159,88 @@ export const advantages = [
     image: <FreshProductsIcon />,
     subTitle: "продукты",
     text: "Никаких заготовок!",
+  },
+];
+
+export const tabsPositions = [
+  {
+    id: 1,
+    tabName: "Топ позиции",
+    tabType: "top",
+    tabContent: [
+      {
+        id: 1,
+        productName: "Ролл Филадельфия",
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll1,
+        price: 219,
+        oldPrice: 269,
+        productType: ["sharp", "hot"],
+      },
+      {
+        id: 2,
+        productName: 'Ролл "Сливочная креветка"',
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll2,
+        price: 219,
+        oldPrice: 269,
+        productType: ["hot"],
+      },
+      {
+        id: 3,
+        productName: 'Ролл "Чикен энд Чиз"',
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll1,
+        price: 219,
+        oldPrice: 269,
+        productType: ["sharp", "hot"],
+      },
+    ],
+  },
+  {
+    id: 2,
+    tabName: "Новинки",
+    tabType: "new",
+    tabContent: [
+      {
+        id: 1,
+        productName: "Ролл Филадельфия",
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll1,
+        price: 219,
+        oldPrice: 269,
+        productType: ["sharp", "hot"],
+      },
+      // {
+      //   id: 2,
+      //   productName: 'Ролл "Сливочная креветка"',
+      //   gram: 200,
+      //   calories: 130,
+      //   structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+      //   image: Roll2,
+      //   price: 219,
+      //   oldPrice: 269,
+      //   productType: ["hot"],
+      // },
+      // {
+      //   id: 3,
+      //   productName: 'Ролл "Чикен энд Чиз"',
+      //   gram: 200,
+      //   calories: 130,
+      //   structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+      //   image: Roll1,
+      //   price: 219,
+      //   oldPrice: 269,
+      //   productType: ["sharp", "hot"],
+      // },
+    ],
   },
 ];
