@@ -49,8 +49,26 @@ export const Positions = () => {
                           <div
                             className={styles["positions-tabs-content__card"]}
                           >
-                            <span>icon</span>
-                            <span>icon</span>
+                            {product.sharp && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageSharp}
+                                <small>Острое</small>
+                              </div>
+                            )}
+                            {product.hot && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageHot}
+                                <small>Горячий ролл</small>
+                              </div>
+                            )}
                             <img
                               src={product.image}
                               alt="Product"
@@ -123,8 +141,26 @@ export const Positions = () => {
                           <div
                             className={styles["positions-tabs-content__card"]}
                           >
-                            <span>icon</span>
-                            <span>icon</span>
+                            {product.sharp && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageSharp}
+                                <small>Острое</small>
+                              </div>
+                            )}
+                            {product.hot && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageHot}
+                                <small>Горячий ролл</small>
+                              </div>
+                            )}
                             <img
                               src={product.image}
                               alt="Product"

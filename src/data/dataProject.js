@@ -16,6 +16,8 @@ import BonusIcon from "../assets/icons/components/BonusIcon";
 import FreshProductsIcon from "../assets/icons/components/FreshProductsIcon";
 import Roll1 from "../assets/images/roll-1.png";
 import Roll2 from "../assets/images/roll-2.png";
+import { HotIcon } from "../assets/icons/components/HotIcon";
+import { SharpIcon } from "../assets/icons/components/SharpIcon";
 
 export const headerTopLinks = [
   {
@@ -177,7 +179,10 @@ export const tabsPositions = [
         image: Roll1,
         price: 219,
         oldPrice: 269,
-        productType: ["sharp", "hot"],
+        sharp: true,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
       },
       {
         id: 2,
@@ -188,7 +193,10 @@ export const tabsPositions = [
         image: Roll2,
         price: 219,
         oldPrice: 224,
-        productType: ["hot"],
+        sharp: false,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
       },
       {
         id: 3,
@@ -199,7 +207,10 @@ export const tabsPositions = [
         image: Roll1,
         price: 199,
         oldPrice: 232,
-        productType: ["sharp", "hot"],
+        sharp: true,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
       },
     ],
   },
@@ -217,7 +228,10 @@ export const tabsPositions = [
         image: Roll1,
         price: 219,
         oldPrice: 269,
-        productType: ["sharp", "hot"],
+        sharp: true,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
       },
       // {
       //   id: 2,
@@ -228,7 +242,8 @@ export const tabsPositions = [
       //   image: Roll2,
       //   price: 219,
       //   oldPrice: 269,
-      //   productType: ["hot"],
+      //   sharp: true,
+      //   hot: true,
       // },
       // {
       //   id: 3,
@@ -239,7 +254,8 @@ export const tabsPositions = [
       //   image: Roll1,
       //   price: 219,
       //   oldPrice: 269,
-      //   productType: ["sharp", "hot"],
+      //   sharp: true,
+      //   hot: true,
       // },
     ],
   },
