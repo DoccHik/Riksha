@@ -33,10 +33,7 @@ const Header = () => {
               <Link to="/" className={styles["header-top__logo"]}></Link>
               <ul className={styles["header-top__menu"]}>
                 {headerTopLinks.map((link) => (
-                  <li
-                    key={link.linkName}
-                    className={styles["header-top__menu-item"]}
-                  >
+                  <li key={link.id} className={styles["header-top__menu-item"]}>
                     <Link to={link.path}>{link.linkName}</Link>
                   </li>
                 ))}
@@ -70,11 +67,8 @@ const Header = () => {
           <div className="container">
             <ul className={styles["header-bottom__menu"]}>
               {headerBottomLinks.map((link) => (
-                <Link to={link.path}>
-                  <li
-                    key={link.id}
-                    className={styles["header-bottom__menu-item"]}
-                  >
+                <Link to={link.path} key={link.id}>
+                  <li className={styles["header-bottom__menu-item"]}>
                     {link.icon}
                     {link.linkName}
                   </li>
