@@ -9,3 +9,9 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 1050px) {
+  .button-custom {
+    padding: 13px 29px;
+  }
+}

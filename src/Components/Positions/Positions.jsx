@@ -40,240 +40,193 @@ export const Positions = () => {
             );
           })}
         </ul>
-        <Swiper
-          spaceBetween={30}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: false,
-          }}
-          // keyboard={true}
-          // mousewheel={true}
-          modules={[Navigation, Autoplay]}
-          slidesPerView={3}
-          navigation
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
-        >
-          <div className={styles["positions-tabs-content"]}>
-            {activeTab === 1
-              ? tabsPositions.map((tab) =>
-                  tab.id === activeTab
-                    ? tab.tabContent.map((product) => {
-                        return (
-                          <SwiperSlide key={product.id}>
-                            <Card>
+        <div className={styles["positions-tabs-content"]}>
+          {activeTab === 1
+            ? tabsPositions.map((tab) =>
+                tab.id === activeTab
+                  ? tab.tabContent.map((product) => {
+                      return (
+                        <Card key={product.id}>
+                          <div
+                            className={styles["positions-tabs-content__card"]}
+                          >
+                            {product.sharp && (
                               <div
                                 className={
-                                  styles["positions-tabs-content__card"]
+                                  styles["positions-tabs-content__card-icon"]
                                 }
                               >
-                                {product.sharp && (
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-icon"
-                                      ]
-                                    }
-                                  >
-                                    {product.imageSharp}
-                                    <small>Острое</small>
-                                  </div>
-                                )}
-                                {product.hot && (
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-icon"
-                                      ]
-                                    }
-                                  >
-                                    {product.imageHot}
-                                    <small>Горячий ролл</small>
-                                  </div>
-                                )}
-                                <img
-                                  src={product.image}
-                                  alt="Product"
-                                  className={
-                                    styles["positions-tabs-content__card-image"]
-                                  }
-                                />
-                                <div
-                                  className={
-                                    styles["positions-tabs-content__card-info"]
-                                  }
-                                >
-                                  <small
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-gram"
-                                      ]
-                                    }
-                                  >
-                                    {product.gram} грамм
-                                  </small>
-                                  <small
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-calories"
-                                      ]
-                                    }
-                                  >
-                                    {product.calories} Ккал
-                                  </small>
-                                </div>
-                                <h3
-                                  className={
-                                    styles["positions-tabs-content__card-title"]
-                                  }
-                                >
-                                  {product.productName}
-                                </h3>
-                                <p
-                                  className={
-                                    styles[
-                                      "positions-tabs-content__card-structure"
-                                    ]
-                                  }
-                                >
-                                  {product.structure}
-                                </p>
-                                <div
-                                  className={
-                                    styles[
-                                      "positions-tabs-content__card-bottom"
-                                    ]
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-price"
-                                      ]
-                                    }
-                                  >
-                                    <small>{product.oldPrice}₽</small>
-                                    <h3>{product.price}₽</h3>
-                                  </div>
-                                  <ButtonCustom>Заказать</ButtonCustom>
-                                </div>
+                                {product.imageSharp}
+                                <small>Острое</small>
                               </div>
-                            </Card>
-                          </SwiperSlide>
-                        );
-                      })
-                    : null
-                )
-              : tabsPositions.map((tab) =>
-                  tab.id === activeTab
-                    ? tab.tabContent.map((product) => {
-                        return (
-                          <SwiperSlide key={product.id}>
-                            <Card>
+                            )}
+                            {product.hot && (
                               <div
                                 className={
-                                  styles["positions-tabs-content__card"]
+                                  styles["positions-tabs-content__card-icon"]
                                 }
                               >
-                                {product.sharp && (
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-icon"
-                                      ]
-                                    }
-                                  >
-                                    {product.imageSharp}
-                                    <small>Острое</small>
-                                  </div>
-                                )}
-                                {product.hot && (
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-icon"
-                                      ]
-                                    }
-                                  >
-                                    {product.imageHot}
-                                    <small>Горячий ролл</small>
-                                  </div>
-                                )}
-                                <img
-                                  src={product.image}
-                                  alt="Product"
-                                  className={
-                                    styles["positions-tabs-content__card-image"]
-                                  }
-                                />
-                                <div
-                                  className={
-                                    styles["positions-tabs-content__card-info"]
-                                  }
-                                >
-                                  <small
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-gram"
-                                      ]
-                                    }
-                                  >
-                                    {product.gram} грамм
-                                  </small>
-                                  <small
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-calories"
-                                      ]
-                                    }
-                                  >
-                                    {product.calories} Ккал
-                                  </small>
-                                </div>
-                                <h3
-                                  className={
-                                    styles["positions-tabs-content__card-title"]
-                                  }
-                                >
-                                  {product.productName}
-                                </h3>
-                                <p
-                                  className={
-                                    styles[
-                                      "positions-tabs-content__card-structure"
-                                    ]
-                                  }
-                                >
-                                  {product.structure}
-                                </p>
-                                <div
-                                  className={
-                                    styles[
-                                      "positions-tabs-content__card-bottom"
-                                    ]
-                                  }
-                                >
-                                  <div
-                                    className={
-                                      styles[
-                                        "positions-tabs-content__card-price"
-                                      ]
-                                    }
-                                  >
-                                    <small>{product.oldPrice}₽</small>
-                                    <h3>{product.price}₽</h3>
-                                  </div>
-                                  <ButtonCustom>Заказать</ButtonCustom>
-                                </div>
+                                {product.imageHot}
+                                <small>Горячий ролл</small>
                               </div>
-                            </Card>
-                          </SwiperSlide>
-                        );
-                      })
-                    : null
-                )}
-          </div>
-        </Swiper>
+                            )}
+                            <img
+                              src={product.image}
+                              alt="Product"
+                              className={
+                                styles["positions-tabs-content__card-image"]
+                              }
+                            />
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-info"]
+                              }
+                            >
+                              <small
+                                className={
+                                  styles["positions-tabs-content__card-gram"]
+                                }
+                              >
+                                {product.gram} грамм
+                              </small>
+                              <small
+                                className={
+                                  styles[
+                                    "positions-tabs-content__card-calories"
+                                  ]
+                                }
+                              >
+                                {product.calories} Ккал
+                              </small>
+                            </div>
+                            <h3
+                              className={
+                                styles["positions-tabs-content__card-title"]
+                              }
+                            >
+                              {product.productName}
+                            </h3>
+                            <p
+                              className={
+                                styles["positions-tabs-content__card-structure"]
+                              }
+                            >
+                              {product.structure}
+                            </p>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-bottom"]
+                              }
+                            >
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-price"]
+                                }
+                              >
+                                <small>{product.oldPrice}₽</small>
+                                <h3>{product.price}₽</h3>
+                              </div>
+                              <ButtonCustom>Заказать</ButtonCustom>
+                            </div>
+                          </div>
+                        </Card>
+                      );
+                    })
+                  : null
+              )
+            : tabsPositions.map((tab) =>
+                tab.id === activeTab
+                  ? tab.tabContent.map((product) => {
+                      return (
+                        <Card key={product.id}>
+                          <div
+                            className={styles["positions-tabs-content__card"]}
+                          >
+                            {product.sharp && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageSharp}
+                                <small>Острое</small>
+                              </div>
+                            )}
+                            {product.hot && (
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-icon"]
+                                }
+                              >
+                                {product.imageHot}
+                                <small>Горячий ролл</small>
+                              </div>
+                            )}
+                            <img
+                              src={product.image}
+                              alt="Product"
+                              className={
+                                styles["positions-tabs-content__card-image"]
+                              }
+                            />
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-info"]
+                              }
+                            >
+                              <small
+                                className={
+                                  styles["positions-tabs-content__card-gram"]
+                                }
+                              >
+                                {product.gram} грамм
+                              </small>
+                              <small
+                                className={
+                                  styles[
+                                    "positions-tabs-content__card-calories"
+                                  ]
+                                }
+                              >
+                                {product.calories} Ккал
+                              </small>
+                            </div>
+                            <h3
+                              className={
+                                styles["positions-tabs-content__card-title"]
+                              }
+                            >
+                              {product.productName}
+                            </h3>
+                            <p
+                              className={
+                                styles["positions-tabs-content__card-structure"]
+                              }
+                            >
+                              {product.structure}
+                            </p>
+                            <div
+                              className={
+                                styles["positions-tabs-content__card-bottom"]
+                              }
+                            >
+                              <div
+                                className={
+                                  styles["positions-tabs-content__card-price"]
+                                }
+                              >
+                                <small>{product.oldPrice}₽</small>
+                                <h3>{product.price}₽</h3>
+                              </div>
+                              <ButtonCustom>Заказать</ButtonCustom>
+                            </div>
+                          </div>
+                        </Card>
+                      );
+                    })
+                  : null
+              )}
+        </div>
       </div>
     </>
   );

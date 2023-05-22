@@ -1,15 +1,27 @@
 .card {
-  // max-width: 392px;
-  // width: 100%;
+  max-width: 392px;
+  width: 100%;
+  // min-height: 450px;
   background-color: #fff;
   padding: 24px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   // margin: 0px 10px 0px 10px;
   transition: all 0.3s ease;
   &:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 }
+
+@media (max-width: 1212px) {
+  .card {
+    padding: 18px;
+  }
+}
+// @media (max-width: 570px) {
+//   .card {
+//     padding: 14px;
+//   }
+// }

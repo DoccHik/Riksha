@@ -77,12 +77,18 @@
       }
     }
     &-content {
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // grid-gap: 20px 20px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px 20px;
+      // display: flex;
+      // align-items: center;
       &__card {
         position: relative;
+        margin: 0px 0px 0px 0px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+        // align-items: center;
         &-icon {
           max-width: 32px;
           text-align: center;
@@ -162,6 +168,65 @@
   }
 }
 
+@media (max-width: 1212px) {
+  .positions {
+    &-tabs {
+      &-content {
+        &__card {
+          &-title {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .positions {
+    &-tabs {
+      &-content {
+        &__card {
+          &-price {
+            small {
+              // font-size: 12px;
+              line-height: 10px;
+            }
+            h3 {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .positions {
+    &-tabs {
+      &-content {
+        &__card {
+          &-title {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .positions {
+    &-tabs {
+      &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px 20px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .advantages {
     &-wrapper {
@@ -169,6 +234,64 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 30px 30px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .positions {
+    &-tabs {
+      &__item {
+        font-size: 30px;
+        margin: 0px 20px 0px 0px;
+        &-active {
+          font-size: 30px;
+          margin: 0px 20px 0px 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 620px) {
+  .positions {
+    &-tabs {
+      &-content {
+        &__card {
+          &-icon {
+            font-size: 10px;
+            svg {
+              max-width: 25px;
+            }
+          }
+          &-info {
+            display: block;
+          }
+          text-align: center;
+          &-title {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 570px) {
+  .positions {
+    &-tabs {
+      justify-content: center;
+      margin: 0px 0px 20px 0px;
+      &__item {
+        font-size: 18px;
+        margin: 0px 10px 0px 10px;
+        &-active {
+          font-size: 18px;
+          margin: 0px 10px 0px 10px;
+        }
+      }
+      &-content {
+        grid-template-columns: repeat(1, minmax(300px, 392px));
+        grid-gap: 10px 20px;
+        justify-content: center;
+      }
     }
   }
 }
