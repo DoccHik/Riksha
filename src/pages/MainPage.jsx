@@ -15,8 +15,8 @@ const MainPage = () => {
         </div>
         <Advantages />
         <Positions />
-        <ComboMenu />
       </div>
+      <ComboMenu />
     </section>
   );
 };
