@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/modules/MainPage.module.scss";
 import { tabsPositions } from "../../data/dataProject";
-import Card from "../Card/Card";
-import ButtonCustom from "../Button/ButtonCustom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Navigation } from "swiper";
+import { Card } from "../Card/Card";
+import { ButtonCustom } from "../Button/ButtonCustom";
 
 export const Positions = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,6 +17,7 @@ export const Positions = () => {
       tab.id === activeTab ? setActiveTab(tab.id) : setActiveTab(1)
     );
   }, []);
+
   return (
     <>
       <div className={styles["positions"]}>

@@ -3,6 +3,7 @@ import styles from "../styles/modules/MainPage.module.scss";
 import Slider from "../Components/Slider/Slider";
 import { Advantages } from "../Components/Advantages/Advantages";
 import { Positions } from "../Components/Positions/Positions";
+import { ComboMenu } from "../Components/ComboMenu/ComboMenu";
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
         </div>
         <Advantages />
         <Positions />
+        <ComboMenu />
       </div>
     </section>
   );

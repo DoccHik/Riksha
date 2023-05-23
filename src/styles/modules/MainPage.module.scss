@@ -46,6 +46,17 @@
 
 .positions {
   margin: 0px 0px 50px 0px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../assets/images/positions-icon.svg");
+    top: -30px;
+    left: -80px;
+    max-width: 64px;
+    width: 100%;
+    height: 63px;
+  }
   &-tabs {
     list-style-type: none;
     display: flex;
@@ -161,6 +172,68 @@
             /* black */
 
             color: #1b1b1b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.combo-menu {
+  &__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0px 0px 40px 0px;
+  }
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px 20px;
+    margin: 0px 0px 50px 0px;
+  }
+  &__card {
+    &-image {
+      width: 100%;
+      margin: 0px 0px 30px 0px;
+    }
+    &-product {
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__netto {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+      }
+      &__gram {
+        margin: 0px 10px 0px 0px;
+      }
+      &__gram,
+      &__calories {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #b7b7b7;
+      }
+      &__size {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        &-item {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 18px;
+          margin: 0px 10px 0px 0px;
+          padding: 4px 8px;
+          background-color: #f5f5f5;
+          border-radius: 4px;
+          color: #b7b7b7;
+          &:last-child {
+            margin: 0;
           }
         }
       }
