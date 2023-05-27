@@ -4,6 +4,7 @@ import Slider from "../Components/Slider/Slider";
 import { Advantages } from "../Components/Advantages/Advantages";
 import { Positions } from "../Components/Positions/Positions";
 import { ComboMenu } from "../Components/ComboMenu/ComboMenu";
+import { Stocks } from "../Components/Stocks/Stocks";
 
 const MainPage = () => {
   return (
@@ -17,6 +18,7 @@ const MainPage = () => {
         <Positions />
       </div>
       <ComboMenu />
+      <Stocks />
     </section>
   );
 };
