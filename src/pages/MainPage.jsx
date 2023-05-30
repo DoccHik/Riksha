@@ -5,6 +5,7 @@ import { Advantages } from "../Components/Advantages/Advantages";
 import { Positions } from "../Components/Positions/Positions";
 import { ComboMenu } from "../Components/ComboMenu/ComboMenu";
 import { Stocks } from "../Components/Stocks/Stocks";
+import Categories from "../Components/Categories/Categories";
 
 const MainPage = () => {
   return (
@@ -19,6 +20,7 @@ const MainPage = () => {
       </div>
       <ComboMenu />
       <Stocks />
+      <Categories />
     </section>
   );
 };
