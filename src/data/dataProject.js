@@ -21,6 +21,9 @@ import { SharpIcon } from "../assets/icons/components/SharpIcon";
 import combo1 from "../assets/images/combo-1.png";
 import combo2 from "../assets/images/combo-2.png";
 import combo3 from "../assets/images/combo-3.png";
+import stockIcon1 from "../assets/images/stock-1.png";
+import stockIcon2 from "../assets/images/stock-2.png";
+import stockIcon3 from "../assets/images/stock-3.png";
 export const headerTopLinks = [
   {
     id: 1,
@@ -340,5 +343,32 @@ export const comboMenuList = [
     oldPrice: 2111,
     price: 1799,
     image: combo3,
+  },
+];
+
+export const stocks = [
+  {
+    id: 1,
+    title: "Празднуй день рождения вместе с нами",
+    description: "Ролл в подарок при заказе в день рождения",
+    background: "#D2F6FF",
+    icon: stockIcon1,
+    // waves: "../assets/images/wave.png",
+  },
+  {
+    id: 2,
+    title: "Доставим заказ за 60 мин",
+    description: "или проморол за опоздание",
+    background: "#FFD8DA",
+    icon: stockIcon2,
+    // waves: "../assets/images/wave.png",
+  },
+  {
+    id: 3,
+    title: "Приведи друга",
+    description: "и получи 250 ₽ на бонусный счет",
+    background: "#DBFFCF",
+    icon: stockIcon3,
+    // waves: "../assets/images/wave.png",
   },
 ];

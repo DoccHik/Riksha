@@ -1,0 +1,14 @@
+.stock {
+  &-card {
+    cursor: pointer;
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
