@@ -24,6 +24,12 @@ import combo3 from "../assets/images/combo-3.png";
 import stockIcon1 from "../assets/images/stock-1.png";
 import stockIcon2 from "../assets/images/stock-2.png";
 import stockIcon3 from "../assets/images/stock-3.png";
+import pizza1 from "../assets/images/pizza-1.png";
+import pizza2 from "../assets/images/pizza-2.png";
+import pizza3 from "../assets/images/pizza-3.png";
+import pizza4 from "../assets/images/pizza-4.png";
+import pizza5 from "../assets/images/pizza-5.png";
+import pizza6 from "../assets/images/pizza-6.png";
 export const headerTopLinks = [
   {
     id: 1,
@@ -370,5 +376,141 @@ export const stocks = [
     background: "#DBFFCF",
     icon: stockIcon3,
     // waves: "../assets/images/wave.png",
+  },
+];
+
+export const productsCategores = [
+  {
+    id: 1,
+    products: [
+      {
+        id: 1,
+        imageURL: pizza1,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Рикша”",
+        size: [30, 50],
+        description:
+          "соус томатный, ветчина, баварские колбаски, сыр моцарелла, колбаса салями, прошутто.",
+        oldPrice: 590,
+        price: 510,
+      },
+      {
+        id: 2,
+        imageURL: pizza2,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Парма”",
+        size: [30, 50],
+        description:
+          "соус бешамель, пармезан, сыр моцарелла, прошутто, руккола.",
+        oldPrice: 699,
+        price: 588,
+      },
+      {
+        id: 3,
+        imageURL: pizza3,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Парма”",
+        size: [30, 50],
+        description:
+          "соус бешамель, пармезан, сыр моцарелла, прошутто, руккола.",
+        oldPrice: 699,
+        price: 588,
+      },
+      {
+        id: 4,
+        imageURL: pizza4,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Парма”",
+        size: [30, 50],
+        description:
+          "соус бешамель, пармезан, сыр моцарелла, прошутто, руккола.",
+        oldPrice: 699,
+        price: 588,
+      },
+      {
+        id: 5,
+        imageURL: pizza5,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Парма”",
+        size: [30, 50],
+        description:
+          "соус бешамель, пармезан, сыр моцарелла, прошутто, руккола.",
+        oldPrice: 699,
+        price: 588,
+      },
+      {
+        id: 6,
+        imageURL: pizza6,
+        gram: 450,
+        calories: 130,
+        title: "Пицца “Парма”",
+        size: [30, 50],
+        description:
+          "соус бешамель, пармезан, сыр моцарелла, прошутто, руккола.",
+        oldPrice: 699,
+        price: 588,
+      },
+    ],
+  },
+  {
+    id: 2,
+    products: [
+      {
+        id: 1,
+        title: "Ролл Филадельфия",
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll1,
+        price: 219,
+        oldPrice: 269,
+        sharp: true,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
+      },
+      {
+        id: 2,
+        title: 'Ролл "Сливочная креветка"',
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll2,
+        price: 219,
+        oldPrice: 224,
+        sharp: false,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
+      },
+      {
+        id: 3,
+        title: 'Ролл "Чикен энд Чиз"',
+        gram: 200,
+        calories: 130,
+        structure: 'Лосось, сыр "Филадельфия", огурец, авокадо',
+        image: Roll1,
+        price: 199,
+        oldPrice: 232,
+        sharp: true,
+        hot: true,
+        imageSharp: <SharpIcon />,
+        imageHot: <HotIcon />,
+      },
+    ],
+  },
+  {
+    id: 3,
+  },
+  {
+    id: 4,
+  },
+  {
+    id: 5,
   },
 ];

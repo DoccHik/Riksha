@@ -362,14 +362,42 @@
     font-size: 48px;
     line-height: 60px;
     margin: 0px 0px 60px 0px;
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../assets/icons/categories-icon.svg");
+      top: 0;
+      right: -80px;
+      width: 64px;
+      height: 57px;
+    }
   }
   &-tabs {
     &__list {
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      // scrollbar-width: none;
+      // background-color: #1b1b1b;
       list-style-type: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0px 0px 50px 0px;
+      padding: 0px 0px 10px 0px;
+      margin: 0px 0px 40px 0px;
+      &::-webkit-scrollbar {
+        // width: 20px;
+        height: 5px;
+        background-color: #000;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #b7b7b7;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #e07153;
+      }
     }
     &__item {
       cursor: pointer;
@@ -386,6 +414,19 @@
       &:hover {
         background-color: #b7b7b7;
       }
+      &-active {
+        cursor: pointer;
+        background-color: #b7b7b7;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        transition: all 0.2s ease;
+      }
       &-icon {
         // background-color: #fff;
         border-radius: 50%;
@@ -399,6 +440,21 @@
         svg {
           width: 25px;
           // height: 24px;
+        }
+      }
+    }
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 24px;
+    margin: 0px 0px 50px 0px;
+    &-card {
+      &-img {
+        max-width: 392px;
+        img {
+          width: 100%;
         }
       }
     }

@@ -19,7 +19,17 @@ body {
   color: #1b1b1b;
   background-color: #fbfbfb;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #b7b7b7;
+  width: 2px;
+}
 
+body::-webkit-scrollbar-thumb {
+  background-color: #e07153;
+}
 .wrapper {
   min-height: 100vh;
   display: flex;

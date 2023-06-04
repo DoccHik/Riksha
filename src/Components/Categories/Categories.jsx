@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/modules/MainPage.module.scss";
-import { headerBottomLinks } from "../../data/dataProject";
+import { headerBottomLinks, productsCategores } from "../../data/dataProject";
+import { Card } from "../Card/Card";
+import { ButtonCustom } from "../Button/ButtonCustom";
 
 const Categories = () => {
+  const [currentCategory, setCurrentCategory] = useState(0);
+  // console.log(headerBottomLinks);
+
+  useEffect(() => {
+    headerBottomLinks.map((category) =>
+      category.id === currentCategory
+        ? setCurrentCategory(category.id)
+        : setCurrentCategory(1)
+    );
+  }, []);
+
   return (
     <>
       <section className={styles["categories"]}>
@@ -10,7 +23,15 @@ const Categories = () => {
           <h2 className={styles["categories__title"]}>Категории</h2>
           <ul className={styles["categories-tabs__list"]}>
             {headerBottomLinks.map((tab) => (
-              <li key={tab.id} className={styles["categories-tabs__item"]}>
+              <li
+                key={tab.id}
+                className={
+                  currentCategory === tab.id
+                    ? styles["categories-tabs__item-active"]
+                    : styles["categories-tabs__item"]
+                }
+                onClick={() => setCurrentCategory(tab.id)}
+              >
                 <div className={styles["categories-tabs__item-icon"]}>
                   {tab.icon}
                 </div>
@@ -18,6 +39,39 @@ const Categories = () => {
               </li>
             ))}
           </ul>
+          <div className={styles["categories__products"]}>
+            {productsCategores.map(
+              (category) =>
+                category.id === currentCategory &&
+                category.products &&
+                category.products.map((product) => {
+                  return (
+                    <Card key={product.id}>
+                      <div className={styles["categories__products-card-img"]}>
+                        <img src={product.imageURL} alt="" />
+                      </div>
+                      <div>
+                        <small>{product.gram} грамм</small>
+                        <small>{product.calories} Ккал</small>
+                        <div>
+                          {product.size &&
+                            product.size.map((size) => <div>{size} см</div>)}
+                        </div>
+                      </div>
+                      <h2>{product.title}</h2>
+                      <p>{product.description}</p>
+                      <div>
+                        <h1>
+                          <small>{product.oldPrice}</small>
+                          {product.price}
+                        </h1>
+                        <ButtonCustom>Заказать</ButtonCustom>
+                      </div>
+                    </Card>
+                  );
+                })
+            )}
+          </div>
         </div>
       </section>
     </>
