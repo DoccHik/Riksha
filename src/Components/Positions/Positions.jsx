@@ -3,20 +3,16 @@ import styles from "../../styles/modules/MainPage.module.scss";
 import { tabsPositions } from "../../data/dataProject";
 import { Card } from "../Card/Card";
 import { ButtonCustom } from "../Button/ButtonCustom";
+import { useDispatch, useSelector } from "react-redux";
+import { handlerTabsIndex } from "../../store/slices/tabsSlice";
 
 export const Positions = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  // console.log(activeTab);
+  const activeTab = useSelector((state) => state.tabsReducer.activeTab);
+  const dispatch = useDispatch();
 
   const handleTabContent = (id) => {
-    setActiveTab(id);
+    dispatch(handlerTabsIndex(id));
   };
-
-  useEffect(() => {
-    tabsPositions.map((tab) =>
-      tab.id === activeTab ? setActiveTab(tab.id) : setActiveTab(1)
-    );
-  }, []);
 
   return (
     <>

@@ -280,10 +280,12 @@
       }
       &__size {
         display: flex;
+        // background-color: #ccc;
         align-items: center;
-        justify-content: space-between;
         list-style-type: none;
-        position: relative;
+        justify-content: space-between;
+        // list-style-type: none;
+        // position: relative;
         &-plus {
           font-weight: 600;
           font-size: 12px;
@@ -304,8 +306,8 @@
           border-radius: 4px;
           color: #b7b7b7;
           transition: all 0.2s ease;
-          &:last-child {
-            margin: 0;
+          &:nth-child(2) {
+            margin: 0px 0px 0px 0px;
           }
           &:hover {
             background-color: #e07153;

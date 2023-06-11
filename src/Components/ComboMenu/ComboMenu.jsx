@@ -39,7 +39,12 @@ export const ComboMenu = () => {
                       </div>
                       <ul className={styles["combo-menu__card-product__size"]}>
                         {product.size.map((size, i) => (
-                          <div key={i}>
+                          <div
+                            key={i}
+                            className={
+                              styles["combo-menu__card-product__size-list"]
+                            }
+                          >
                             {size === 50 && (
                               <span
                                 className={

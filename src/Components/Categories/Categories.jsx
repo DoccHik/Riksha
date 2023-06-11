@@ -3,6 +3,7 @@ import styles from "../../styles/modules/MainPage.module.scss";
 import { headerBottomLinks, productsCategores } from "../../data/dataProject";
 import { Card } from "../Card/Card";
 import { ButtonCustom } from "../Button/ButtonCustom";
+import axios from "axios";
 
 const Categories = () => {
   const [currentCategory, setCurrentCategory] = useState(0);
@@ -40,37 +41,44 @@ const Categories = () => {
             ))}
           </ul>
           <div className={styles["categories__products"]}>
-            {productsCategores.map(
-              (category) =>
-                category.id === currentCategory &&
-                category.products &&
-                category.products.map((product) => {
-                  return (
-                    <Card key={product.id}>
-                      <div className={styles["categories__products-card-img"]}>
-                        <img src={product.imageURL} alt="" />
-                      </div>
-                      <div>
-                        <small>{product.gram} грамм</small>
-                        <small>{product.calories} Ккал</small>
-                        <div>
-                          {product.size &&
-                            product.size.map((size) => <div>{size} см</div>)}
+            {productsCategores &&
+              productsCategores.map(
+                (category) =>
+                  category.id === currentCategory &&
+                  category.products &&
+                  category.products.map((product) => {
+                    return (
+                      <Card key={product.id}>
+                        <div
+                          className={styles["categories__products-card-img"]}
+                        >
+                          <img src={product.imageURL} alt="product" />
                         </div>
-                      </div>
-                      <h2>{product.title}</h2>
-                      <p>{product.description}</p>
-                      <div>
-                        <h1>
-                          <small>{product.oldPrice}</small>
-                          {product.price}
-                        </h1>
-                        <ButtonCustom>Заказать</ButtonCustom>
-                      </div>
-                    </Card>
-                  );
-                })
-            )}
+                        <div>
+                          <small>{product.gram} грамм</small>
+                          <small>{product.calories} Ккал</small>
+                          <div>
+                            {product.size &&
+                              product.size.map((size) => <div>{size} см</div>)}
+                          </div>
+                        </div>
+                        <h2>{product.title}</h2>
+                        <p>{product.description}</p>
+                        <div>
+                          <h1>
+                            <small>{product.oldPrice}</small>
+                            {product.price}
+                          </h1>
+                          <ButtonCustom>Заказать</ButtonCustom>
+                        </div>
+                      </Card>
+                    );
+                  })
+              )}
+          </div>
+          <div>
+            <div>Пагинация 1...2...3</div>
+            <div>Перейти в каталог </div>
           </div>
         </div>
       </section>

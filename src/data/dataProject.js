@@ -386,6 +386,7 @@ export const productsCategores = [
       {
         id: 1,
         imageURL: pizza1,
+        category: "top",
         gram: 450,
         calories: 130,
         title: "Пицца “Рикша”",
@@ -398,6 +399,7 @@ export const productsCategores = [
       {
         id: 2,
         imageURL: pizza2,
+        category: "new",
         gram: 450,
         calories: 130,
         title: "Пицца “Парма”",
