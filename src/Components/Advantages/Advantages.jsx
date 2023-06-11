@@ -1,10 +1,14 @@
 import React from "react";
 import { advantages } from "../../data/dataProject";
 import styles from "../../styles/modules/MainPage.module.scss";
-
+import { motion } from "framer-motion";
 export const Advantages = () => {
   return (
-    <div className={styles["advantages-wrapper"]}>
+    <motion.div
+      className={styles["advantages-wrapper"]}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       {advantages.map((item) => {
         return (
           <div key={item.id} className={styles["advantages__item"]}>
@@ -15,6 +19,6 @@ export const Advantages = () => {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };

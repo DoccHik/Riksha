@@ -5,6 +5,7 @@ import { Card } from "../Card/Card";
 import { ButtonCustom } from "../Button/ButtonCustom";
 import { useDispatch, useSelector } from "react-redux";
 import { handlerTabsIndex } from "../../store/slices/tabsSlice";
+import { motion } from "framer-motion";
 
 export const Positions = () => {
   const activeTab = useSelector((state) => state.tabsReducer.activeTab);

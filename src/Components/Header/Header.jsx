@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/modules/Header.module.scss";
+import { motion } from "framer-motion";
 // import headerLogo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 import PhoneIcon from "../../assets/icons/components/PhoneIcon";
@@ -26,7 +27,11 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles["header"]}>
+      <motion.header
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className={styles["header"]}
+      >
         <div className={styles["header-top"]}>
           <div className="container">
             <div className={styles["header-top-row"]}>
@@ -77,7 +82,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
-      </header>
+      </motion.header>
       <BurgerMenu
         showBurgerMenu={showBurgerMenu}
         setShowBurgerMenu={setShowBurgerMenu}

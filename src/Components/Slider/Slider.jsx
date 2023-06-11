@@ -10,6 +10,7 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import { Autoplay, Keyboard, Navigation } from "swiper";
 import { swiperSlides } from "../../data/dataProject";
+import { motion } from "framer-motion";
 
 const Slider = () => {
   return (
@@ -34,7 +35,11 @@ const Slider = () => {
       >
         {swiperSlides.map((slide) => (
           <SwiperSlide key={slide.id} className={styles["swiper-slide"]}>
-            <div className={styles["slide-wrapper"]}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className={styles["slide-wrapper"]}
+            >
               <div>
                 <h1>{slide.title}</h1>
                 <p>{slide.description}</p>
@@ -44,7 +49,7 @@ const Slider = () => {
                 src={slide.imageURL}
                 alt=""
               />
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
